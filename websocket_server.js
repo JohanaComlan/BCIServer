@@ -56,7 +56,7 @@ wss.on('connection', (ws) => {
 });  
 
 // 启动服务器  
-const PORT = 8081;  
+const PORT = process.env.PORT || 8081; 
 server.listen(PORT, () => {  
     console.log(`WebSocket The server is running, listening on port ${PORT}`);  
 });
